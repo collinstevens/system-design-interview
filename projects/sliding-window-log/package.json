@@ -1,0 +1,17 @@
+{
+  "name": "sliding-window-log",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "mise exec -- tsc --noEmit",
+    "build": "mise exec -- tsc && mise exec -- node -e \"require('node:fs').copyFileSync('src/sliding-window-log.lua', 'dist/sliding-window-log.lua')\"",
+    "demo": "bun run build && mise exec -- node dist/demo.js",
+    "redis:up": "docker compose up -d --wait",
+    "redis:down": "docker compose down"
+  },
+  "dependencies": {
+    "effect": "catalog:",
+    "redis": "catalog:"
+  }
+}
