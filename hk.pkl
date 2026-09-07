@@ -1,0 +1,32 @@
+amends "package://github.com/jdx/hk/releases/download/v1.58.1/hk@1.58.1#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.58.1/hk@1.58.1#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+  ["mise"] = Builtins.mise
+  ["oxlint"] = (Builtins.ox_lint) {
+    prefix = List("bun", "run")
+  }
+  ["oxfmt"] = (Builtins.oxfmt) {
+    prefix = List("bun", "run")
+  }
+}
+
+hooks {
+  ["commit-msg"] {
+    steps {
+      ["conventional-commit"] = Builtins.check_conventional_commit
+    }
+  }
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps = linters
+  }
+  ["check"] {
+    steps = linters
+  }
+  ["fix"] {
+    fix = true
+    steps = linters
+  }
+}

@@ -6,11 +6,18 @@
   ],
   "type": "module",
   "scripts": {
+    "lint": "mise exec -- oxlint --deny-warnings",
+    "lint:fix": "mise exec -- oxlint --deny-warnings --fix",
+    "fmt": "mise exec -- oxfmt",
+    "fmt:check": "mise exec -- oxfmt --check",
     "check": "mise exec -- bun run --workspaces check",
     "build": "mise exec -- bun run --workspaces build"
   },
   "devDependencies": {
-    "@types/node": "24"
+    "@oxlint/plugins": "1.82.0",
+    "@types/node": "24",
+    "oxfmt": "0.67.0",
+    "oxlint": "1.82.0"
   },
   "engines": {
     "node": ">=24.20.0"

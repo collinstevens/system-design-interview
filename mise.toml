@@ -4,3 +4,6 @@ hk = "1.58.1"
 node = "24.20.0"
 "npm:typescript" = "7.0.2"
 python = "3.14.7"
+
+[hooks]
+postinstall = "hk install --mise"
