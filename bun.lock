@@ -11,6 +11,14 @@
         "oxlint": "1.82.0",
       },
     },
+    "projects/fixed-window-counter": {
+      "name": "fixed-window-counter",
+      "version": "1.0.0",
+      "dependencies": {
+        "effect": "catalog:",
+        "redis": "catalog:",
+      },
+    },
     "projects/leaking-bucket": {
       "name": "leaking-bucket",
       "version": "1.0.0",
@@ -150,6 +158,8 @@
     "effect": ["effect@4.0.0-rc.112", "", { "dependencies": { "fast-check": "^4.9.0", "msgpackr": "^2.0.5" } }, "sha512-wXxwuh1Ywnv4cPRM3Wfa0vDwuOHnZ1TsTgHJkG9XgzND6inhBH9n1vBxhg3iIXOia/OrpmvVmd3lrD4vq6bF3A=="],
 
     "fast-check": ["fast-check@4.9.0", "", { "dependencies": { "pure-rand": "^8.0.0" } }, "sha512-7ms6T7SybUev/PQITciI0yLM2pOSFy5zpG8Ty7tQofcVaQUvrMXp6CBwqF6fThLCLOrfBtuHAtwq6Yu4XPCllg=="],
+
+    "fixed-window-counter": ["fixed-window-counter@workspace:projects/fixed-window-counter"],
 
     "leaking-bucket": ["leaking-bucket@workspace:projects/leaking-bucket"],
 
