@@ -1,0 +1,19 @@
+{
+  "name": "system-design-interview",
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "check": "mise exec -- bun run --workspaces check",
+    "build": "mise exec -- bun run --workspaces build"
+  },
+  "devDependencies": {
+    "@types/node": "24"
+  },
+  "engines": {
+    "node": ">=24.20.0"
+  },
+  "packageManager": "bun@1.4.2"
+}
