@@ -34,6 +34,8 @@ All five rate-limiting algorithms in the book have separate TypeScript projects 
 | [Sliding window log](projects/sliding-window-log/README.md)         | Track individual attempt timestamps in a rolling window.                    | 6379             |
 | [Sliding window counter](projects/sliding-window-counter/README.md) | Estimate rolling traffic using weighted current and previous window counts. | 6383             |
 
+[Python Z3 models](models/README.md) verify the token bucket and sliding window log algorithms' token accounting, refill timing, rolling-window safety, and boundary behavior. The model guide includes setup, proof scope, and counterexamples when assumptions are removed.
+
 Run a project's scripts from its directory, or select it from the root:
 
 ```sh

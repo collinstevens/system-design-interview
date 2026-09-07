@@ -52,3 +52,7 @@ Each client has a Redis sorted set. A single Lua script reads Redis server time,
 The window includes both endpoints, `[now - windowMs, now]`, matching the book. UUID members keep requests distinct even when their timestamps match. Inactive logs expire after `windowMs + 1` milliseconds.
 
 Rejected requests stay in the log, as in the pictured algorithm. Repeated rejected attempts can therefore prolong rejection, and memory grows with all attempts in the window rather than only accepted requests. `remaining` describes unused capacity immediately after this attempt.
+
+## Formal model
+
+The [Python Z3 model](../../models/README.md#sliding-window-log) checks inclusive boundaries, safe expiration, attempt counts, and rolling-window admission safety. It includes an inductive cardinality argument, bounded symbolic histories, and witnesses showing why unique members and nondecreasing time matter. Run it using the [model setup instructions](../../models/README.md#run).

@@ -61,3 +61,7 @@ Refills happen in whole batches, matching the photographed example. The interval
 For Figure 4-6, a request at 0 seconds leaves three tokens; three requests at 5 seconds empty the bucket; a request at 20 seconds is rejected; and the bucket receives four tokens at 60 seconds before processing the next request.
 
 Each check uses constant time and each client uses constant storage. Hashes remain in Redis to preserve each client's refill schedule, so total storage grows with distinct clients. Deleting a client's key resets its bucket to full and starts a new schedule on its next request. This exercise leaves inactive-client cleanup to the caller.
+
+## Formal model
+
+The [Python Z3 model](../../models/README.md#token-bucket) proves token bounds, cumulative accounting, refill timing, and retry behavior under the documented assumptions. It also finds a clock-rollback example. Run it using the [model setup instructions](../../models/README.md#run).
