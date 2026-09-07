@@ -1,0 +1,17 @@
+{
+  "name": "sliding-window-counter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "mise exec -- tsc --noEmit",
+    "build": "mise exec -- tsc && mise exec -- node -e \"for (const file of ['sliding-window-counter.lua']) require('node:fs').copyFileSync('src/' + file, 'dist/' + file)\"",
+    "demo": "bun run build && mise exec -- node dist/demo.js",
+    "redis:up": "docker compose up -d --wait",
+    "redis:down": "docker compose down"
+  },
+  "dependencies": {
+    "effect": "catalog:",
+    "redis": "catalog:"
+  }
+}

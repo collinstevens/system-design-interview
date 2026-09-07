@@ -24,7 +24,7 @@ mise.exe exec -- bun run --filter sliding-window-log demo alice
 
 ## Projects
 
-The rate-limiting exercises have separate TypeScript projects backed by Redis. Each has its own demo and Docker Compose configuration.
+All five rate-limiting algorithms in the book have separate TypeScript projects backed by Redis. Each has its own demo and Docker Compose configuration.
 
 | Project                                                             | Behavior                                                                    | Local Redis port |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------- | ---------------- |
@@ -32,6 +32,7 @@ The rate-limiting exercises have separate TypeScript projects backed by Redis. E
 | [Leaking bucket](projects/leaking-bucket/README.md)                 | Queue requests in a bounded FIFO and release them at a fixed pace.          | 6382             |
 | [Fixed window counter](projects/fixed-window-counter/README.md)     | Count attempts in clock-aligned windows.                                    | 6381             |
 | [Sliding window log](projects/sliding-window-log/README.md)         | Track individual attempt timestamps in a rolling window.                    | 6379             |
+| [Sliding window counter](projects/sliding-window-counter/README.md) | Estimate rolling traffic using weighted current and previous window counts. | 6383             |
 
 Run a project's scripts from its directory, or select it from the root:
 

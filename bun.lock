@@ -27,6 +27,14 @@
         "redis": "catalog:",
       },
     },
+    "projects/sliding-window-counter": {
+      "name": "sliding-window-counter",
+      "version": "1.0.0",
+      "dependencies": {
+        "effect": "catalog:",
+        "redis": "catalog:",
+      },
+    },
     "projects/sliding-window-log": {
       "name": "sliding-window-log",
       "version": "1.0.0",
@@ -176,6 +184,8 @@
     "pure-rand": ["pure-rand@8.4.2", "", {}, "sha512-vvuOGgcuPJAirlHvuQw1TrOiw7ptaIXXmIbNuiNOY6lNGJJH49PQ1Kj4nd783nPdQhQdicgOjVI2yI/9BD6/Ng=="],
 
     "redis": ["redis@6.2.1", "", { "dependencies": { "@redis/bloom": "6.2.1", "@redis/client": "6.2.1", "@redis/json": "6.2.1", "@redis/search": "6.2.1", "@redis/time-series": "6.2.1" } }, "sha512-Z9VHtgYs48PiQC77X9O2Er8Hj4T+5BtFjT91/vi5Is1D04N72cA946ZslM1ImJw8ZctFBZWAVjM7S5wJNeHMpg=="],
+
+    "sliding-window-counter": ["sliding-window-counter@workspace:projects/sliding-window-counter"],
 
     "sliding-window-log": ["sliding-window-log@workspace:projects/sliding-window-log"],
 
