@@ -24,6 +24,7 @@ mise.exe exec -- bun run --filter sliding-window-log demo alice
 
 ## Projects
 
+- [Token bucket rate limiter](projects/token-bucket/README.md): TypeScript with Redis running in Docker.
 - [Sliding window log rate limiter](projects/sliding-window-log/README.md): TypeScript with Redis running in Docker.
 
 Run a project's scripts from its directory, or select it from the root:

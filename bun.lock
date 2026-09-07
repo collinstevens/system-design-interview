@@ -19,6 +19,14 @@
         "redis": "catalog:",
       },
     },
+    "projects/token-bucket": {
+      "name": "token-bucket",
+      "version": "1.0.0",
+      "dependencies": {
+        "effect": "catalog:",
+        "redis": "catalog:",
+      },
+    },
   },
   "catalog": {
     "effect": "4.0.0-rc.112",
@@ -152,6 +160,8 @@
     "sliding-window-log": ["sliding-window-log@workspace:projects/sliding-window-log"],
 
     "tinypool": ["tinypool@2.1.2", "", {}, "sha512-9YodfrxS9g9IbFr/KOjE5bAeJ0p61n3bW6mqvy0jtoeKd1kTW1Cxm0oulm6KX2lyM9Gl6WIe8nEbY7LWv5ZJww=="],
+
+    "token-bucket": ["token-bucket@workspace:projects/token-bucket"],
 
     "undici-types": ["undici-types@7.18.2", "", {}, "sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w=="],
   }
